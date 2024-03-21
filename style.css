@@ -273,7 +273,7 @@ text-align: left;
       justify-content: center;
       align-items: center;
       position:relative;
-      background-image: url();
+      background-image: url ();
       width: 90%;
       min-height: auto;
       margin: 32px;
