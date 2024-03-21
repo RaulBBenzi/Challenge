@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
     <title>Encriptador</title>
 </head>
 <body>
-
-    <header>
-      <img class="logo" src="./assets/Logo.png" alt="logo da alura">
-    </header>
-
     <main>
+      <div class="logo">
+      <img  src="./assets/Logo.png" alt="logo da alura">
+    </div>
 
-    <section class="texto-inserido">
-           <textarea class="text-area" cols="41" rows="4" ></textarea>
+    <div class="texto-inserido">
+           <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
 
+           <div>
            <div class="informacao">
-                <h6>Apenas letras minúsculas e sem acento.</h6>
+                <h6><img src="./assets/icon-conteudo.png" alt=""> Apenas letras minúsculas e sem acento.</h6>
            </div>
 
            <div class="botoes">
-                <button class="botao-criptografar">Criptografar</button>
-                <button class="botao-descriptografar">Descriptografar</button>
+                <button onclick="btnEncriptar()" class="botao-criptografar">Criptografar</button>
+                <button onclick="btnDescriptar()" class="botao-descriptografar">Descriptografar</button>
            </div>
-    </section>
+          </div>
+    </div>
 
-    <section class="mensagem">
-           <textarea class="mensagem-conteudo" cols="30" rows="10"></textarea>
-           <button class="botao-copiar">Copiar</button>
-    </section>
+    <div class="aside">
+         <div class="mensagem">
+          <div class="mensagem-text"></div>
+           <div class="texto-vazio">
+            <p class="texto-vazio-grande">Nenhuma mensagem encontrada</p>
+            <p class="texto-vazio-pequeno">Digite um texto que você deseja criptografar ou descriptografar.</p>
+          </div>
+           <button onclick="copiarTexto()" class="botao-copiar">Copiar</button>
+          </div>
+    </div>
         
     </main>
     <script src="script.js"></script>
